@@ -67,10 +67,10 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log((objetivo.transform.position - player.transform.position).normalized);
             player.GetComponent<Rigidbody2D>().AddForce((objetivo.transform.position - player.transform.position).normalized);
-            if (player.GetComponent<Rigidbody2D>().velocity >= fuerza)
+            /*if (player.GetComponent<Rigidbody2D>().velocity >= fuerza)
             {
 
-            }
+            }*/
         }
 
 
