@@ -26,8 +26,9 @@ public class ControllerMousePhysics : MonoBehaviour
 
         mouse = new Vector3(mouse.x, mouse.y, 0);
 
-        if (player.position != mouse)
+        if (player.position != mouse && Time.timeScale != 0)
         {
+            Debug.Log("Aplicando Fuerzas");
             rgb2d.AddForce((mouse - player.position).normalized, ForceMode2D.Force);
         }
 

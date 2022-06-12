@@ -11,13 +11,24 @@ public class Maldecir : MonoBehaviour
     [SerializeField]
     Image minijuego;
 
+    void Start()
+    {
+        minijuego = GameObject.Find("Minijuego").GetComponent<Image>();    
+    }
+
     void Update()
     {
         if (fanta && target && Input.GetKeyDown(KeyCode.B))
         {
-            Debug.Log("Estoy maldito");
+            Debug.Log("Maldiciendo");
             minijuego.enabled = true;
             Time.timeScale = 0;
+        }
+        if (fanta && target && Input.GetKeyDown(KeyCode.N))
+        {
+            Debug.Log("Maldito");
+            minijuego.enabled = false;
+            Time.timeScale = 1;
         }
     }
 }
