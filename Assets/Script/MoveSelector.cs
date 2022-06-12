@@ -6,10 +6,13 @@ public class MoveSelector : MonoBehaviour
 {
     [SerializeField]
     ControllerMousePhysics mouse;
+
     [SerializeField]
     ControllerWASD WASD;
+
     [SerializeField]
     bool keyboard = false;
+
     [SerializeField]
     Rigidbody2D rgb2d;
 
@@ -39,8 +42,6 @@ public class MoveSelector : MonoBehaviour
         {
             mouse.enabled = true;
             WASD.enabled = false;
-
-            Debug.Log(rgb2d.velocity);
         }
     }
 }

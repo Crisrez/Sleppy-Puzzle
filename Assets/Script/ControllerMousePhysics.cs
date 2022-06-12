@@ -8,6 +8,9 @@ public class ControllerMousePhysics : MonoBehaviour
     Transform player, target;
 
     [SerializeField]
+    SpriteRenderer fanta;
+
+    [SerializeField]
     Rigidbody2D rgb2d;
 
     [SerializeField]
@@ -26,6 +29,18 @@ public class ControllerMousePhysics : MonoBehaviour
         if (player.position != mouse)
         {
             rgb2d.AddForce((mouse - player.position).normalized, ForceMode2D.Force);
+        }
+
+        if (rgb2d.velocity.magnitude > 0.3f)
+        {
+            if (mouse.x > player.position.x)
+            {
+                fanta.flipX = true;
+            }
+            else
+            {
+                fanta.flipX = false;
+            }
         }
     }
 }
