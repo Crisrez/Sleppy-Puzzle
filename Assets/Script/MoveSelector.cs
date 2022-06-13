@@ -10,8 +10,7 @@ public class MoveSelector : MonoBehaviour
     [SerializeField]
     ControllerWASD WASD;
 
-    [SerializeField]
-    bool keyboard = false;
+    public bool keyboard = false;
 
     [SerializeField]
     Rigidbody2D rgb2d;
